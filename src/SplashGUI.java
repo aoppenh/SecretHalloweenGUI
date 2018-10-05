@@ -7,12 +7,13 @@ import java.io.IOException;
 
 /**
  * Created by Andrew Oppenheimer on 12/25/2016.
+ * Version 10/05/2018
  */
 public class SplashGUI extends JFrame {
     private JPanel formPanel;
     private JLabel imgLabel;
     private Container cPane;
-    BufferedImage img = ImageIO.read(new File("src\\SecretSantaGUI.jpg"));
+    BufferedImage img = ImageIO.read(new File("src\\Logo.png"));
 
     public SplashGUI(String title) throws IOException {
         this.setTitle(title);
@@ -25,6 +26,6 @@ public class SplashGUI extends JFrame {
         cPane = this.getContentPane();
         cPane.add(formPanel);
         formPanel.setBackground(new Color(img.getRGB(428, 602), true));
-        imgLabel.setIcon(new ImageIcon("src\\SecretSantaGUI.jpg"));
+        imgLabel.setIcon(new ImageIcon("src\\Logo.png"));
     }
 }
