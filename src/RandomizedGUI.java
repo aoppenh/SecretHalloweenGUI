@@ -43,8 +43,8 @@ public class RandomizedGUI extends JFrame {
         reDoButton.setPreferredSize(new Dimension(140, 70));
         exitButton.setPreferredSize(new Dimension(140, 70));
         saveButton.setPreferredSize(new Dimension(140, 70));
-        imgLabel1.setIcon(new ImageIcon("src\\santa-160903__340.png"));
-        imgLabel2.setIcon(new ImageIcon("src\\santa-160903__340.png"));
+        imgLabel1.setIcon(new ImageIcon("src\\ribbon.png"));
+        imgLabel2.setIcon(new ImageIcon("src\\ribbon.png"));
         randomList1 = new StringBuilder();
         randomList2 = new StringBuilder();
         randomDisplayString1 = "";

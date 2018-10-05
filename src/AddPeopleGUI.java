@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by Andrew Oppenheimer on 12/25/2016.
- * Version 7/27/2018
+ * Version 10/05/2018
  */
 public class AddPeopleGUI extends JFrame {
     private JPanel formPanel;
@@ -45,10 +45,8 @@ public class AddPeopleGUI extends JFrame {
         randomizeButton.setPreferredSize(new Dimension(140, 70));
         addPersonButton.setPreferredSize(new Dimension(140, 70));
         importFileButton.setPreferredSize(new Dimension(140, 70));
-        imgLabel1.setIcon(new ImageIcon("src\\santa-160903__340.png"));
-        imgLabel2.setIcon(new ImageIcon("src\\santa-160903__340.png"));
-        imgLabel3.setIcon(new ImageIcon("src\\snowman-160884__340.png"));
-        imgLabel4.setIcon(new ImageIcon("src\\snowman-160884__340.png"));
+        imgLabel3.setIcon(new ImageIcon("src\\ribbon.png"));
+        imgLabel4.setIcon(new ImageIcon("src\\ribbon.png"));
         addPersonBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
