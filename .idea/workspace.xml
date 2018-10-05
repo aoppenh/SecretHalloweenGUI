@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3284bac-28ca-4ffc-a9ac-80d8d6738dc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AddPeopleGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPeopleGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddPeopleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddPeopleGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/christmas-160950__340.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ribbon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/christmas-ball-147410__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/christmas-tree-23384__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flower-1829706__340.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flower-1829706__340.jpg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hot-chocolate-576418__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reindeer-160879__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/santa-160903__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/santas-hat-43847__340.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snowflake.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/snowman-160884__340.png" beforeDir="false" />
-    </list>
+    <list default="true" id="b3284bac-28ca-4ffc-a9ac-80d8d6738dc2" name="Default" comment="" />
     <ignored path="SecretSantaGUI.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -88,7 +72,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="5" />
-          <entry key="java" value="3" />
+          <entry key="java" value="4" />
           <entry key="jpg" value="2" />
           <entry key="png" value="10" />
         </counts>
@@ -97,7 +81,7 @@
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="5" />
           <entry key="Image" value="12" />
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -117,7 +101,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -126,6 +110,15 @@
                 <element signature="e#2188#2394#0" expanded="true" />
                 <element signature="e#2393#2394#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RandomizedGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -164,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/ErrorGUI.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Person.java" />
-        <option value="$PROJECT_DIR$/src/RandomizedGUI.java" />
         <option value="$PROJECT_DIR$/src/FileNameGUI.java" />
         <option value="$PROJECT_DIR$/src/threadCheck.java" />
         <option value="$PROJECT_DIR$/src/SplashGUI.java" />
@@ -176,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/AddPeopleGUI.java" />
         <option value="$PROJECT_DIR$/src/MenuGUI.form" />
         <option value="$PROJECT_DIR$/src/MenuGUI.java" />
+        <option value="$PROJECT_DIR$/src/RandomizedGUI.java" />
       </list>
     </option>
   </component>
@@ -211,6 +204,12 @@
               <item name="SecretSantaGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SecretSantaGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SecretSantaGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RandomizedGUI" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -222,7 +221,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="332" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538712136429" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538720176268" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -534,12 +533,12 @@
       <workItem from="1532750325059" duration="590000" />
       <workItem from="1538692308660" duration="411000" />
       <workItem from="1538692984336" duration="80000" />
-      <workItem from="1538711788888" duration="332000" />
+      <workItem from="1538711788888" duration="971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86916000" />
+    <option name="totallyTimeSpent" value="87555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,6 +551,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -562,7 +562,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32814237" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29477197" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29477197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997722" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -685,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RandomizedGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ImportFileGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -783,6 +776,13 @@
             <element signature="e#2188#2394#0" expanded="true" />
             <element signature="e#2393#2394#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RandomizedGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
         </state>
       </provider>
     </entry>
