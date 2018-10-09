@@ -43,8 +43,8 @@ public class RandomizedGUI extends JFrame {
         reDoButton.setPreferredSize(new Dimension(140, 70));
         exitButton.setPreferredSize(new Dimension(140, 70));
         saveButton.setPreferredSize(new Dimension(140, 70));
-        imgLabel1.setIcon(new ImageIcon("src\\ribbon.png"));
-        imgLabel2.setIcon(new ImageIcon("src\\ribbon.png"));
+        imgLabel1.setIcon(new ImageIcon("src\\Jackolantern.png"));
+        imgLabel2.setIcon(new ImageIcon("src\\Jackolantern.png"));
         randomList1 = new StringBuilder();
         randomList2 = new StringBuilder();
         randomDisplayString1 = "";
@@ -82,7 +82,7 @@ public class RandomizedGUI extends JFrame {
                 santaAssigned.setText("");
                 Model.people = new ArrayList<>();
                 dispose();
-                new AddPeopleGUI("Secret Santa", Model.list);
+                new AddPeopleGUI("Secret Halloween", Model.list);
 //                String[] temp = santaAssignments.getText().split("\n");
 //                for (String str : temp) {
 //                    Model.people.add(new Person(str, false, false));
@@ -94,10 +94,10 @@ public class RandomizedGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    new FileNameGUI("Secret Santa");
+                    new FileNameGUI("Secret Halloween");
                 } catch (Exception e1) {
                     e1.printStackTrace();
-                    new ErrorGUI("Secret Santa Error", "An Error Occurred");
+                    new ErrorGUI("Secret Halloween Error", "An Error Occurred");
                 }
             }
         });

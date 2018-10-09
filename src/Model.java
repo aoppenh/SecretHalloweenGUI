@@ -30,6 +30,7 @@ public class Model {
     static StringBuilder saveBuilder;
     static String importDisplayString;
     static String tempDisplayString = "";
+    static String tempCandyString = "";
     static String saveString;
 
     public static void setPeopleAndAssignments() {
@@ -41,7 +42,7 @@ public class Model {
         while (counterAssign < people.size()) {
             int ran = r.nextInt(people.size());
 //            for (Person p : people) {
-//                System.out.println(p.getName() + " : " + p.getAssigned() + " : " + p.getSanta() + " : " + p.getClass());
+//                System.out.println(p.getName() + " : " + p.getAssigned() + " : " + p.getCandy() + " : " + p.getClass());
 //            }
             newTime = System.currentTimeMillis() - startTime;
             if (newTime > 1250) {
@@ -54,9 +55,9 @@ public class Model {
                 startTime = System.currentTimeMillis();
 //                System.out.println("TIMEOUT : RE-RANDOMIZING : " + newTime);
             }
-            if (!(people.get(ran).equals(people.get(i))) && !people.get(ran).getAssigned() && !people.get(i).getSanta()) {
+            if (!(people.get(ran).equals(people.get(i))) && !people.get(ran).getAssigned() && !people.get(i).getCandy()) {
                 peopleAndAssignments.put(people.get(ran), people.get(i));
-                people.get(ran).set(people.get(ran).getName(), true, people.get(ran).getSanta());
+                people.get(ran).set(people.get(ran).getName(), true, people.get(ran).getCandy());
                 people.get(i).set(people.get(i).getName(), people.get(i).getAssigned(), true);
                 counterAssign++;
                 i++;

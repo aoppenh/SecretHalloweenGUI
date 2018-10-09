@@ -4,12 +4,12 @@
 public class Person {
     private String name;
     private boolean assigned;
-    private boolean santa;
+    private boolean candy;
 
     public Person(String name, boolean assigned, boolean santa) {
         this.name = name;
         this.assigned = assigned;
-        this.santa = santa;
+        this.candy = santa;
     }
 
     public String getName() {
@@ -18,13 +18,13 @@ public class Person {
     public boolean getAssigned() {
         return assigned;
     }
-    public boolean getSanta() {
-        return santa;
+    public boolean getCandy() {
+        return candy;
     }
 
     public void set(String name, boolean assigned, boolean santa) {
         this.name = name;
         this.assigned = assigned;
-        this.santa = santa;
+        this.candy = santa;
     }
 }

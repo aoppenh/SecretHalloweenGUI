@@ -16,14 +16,6 @@ public class MenuGUI extends JFrame {
     private JLabel secretSantaLabel;
     private JPanel middlePanel;
     private JLabel imgLabel;
-    private JLabel imgLabel1;
-    private JLabel imgLabel2;
-    private JLabel imgLabel3;
-    private JLabel imgLabel4;
-    private JLabel imgLabel5;
-    private JLabel imgLabel6;
-    private JLabel imgLabel7;
-    private JLabel imgLabel8;
     private Container cPane;
 
     public MenuGUI(String title) {
@@ -37,7 +29,7 @@ public class MenuGUI extends JFrame {
         cPane.add(formPanel);
         addButton.setPreferredSize(new Dimension(70, 70));
         exitButton.setPreferredSize(new Dimension(70, 70));
-        imgLabel.setIcon(new ImageIcon("src\\ribbon.png"));
+        imgLabel.setIcon(new ImageIcon("src\\Jackolantern.png"));
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,7 +40,7 @@ public class MenuGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new AddPeopleGUI("Secret Santa", "");
+                new AddPeopleGUI("Secret Halloween", "");
             }
         });
     }

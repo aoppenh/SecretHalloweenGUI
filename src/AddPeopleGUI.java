@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by Andrew Oppenheimer on 12/25/2016.
- * Version 10/05/2018
+ * Version 10/09/2018
  */
 public class AddPeopleGUI extends JFrame {
     private JPanel formPanel;
@@ -18,11 +18,14 @@ public class AddPeopleGUI extends JFrame {
     private JTextField addPersonBox;
     private JButton exitButton;
     private JButton randomizeButton;
-    private JButton importFileButton;
     private JLabel imgLabel2;
     private JLabel imgLabel1;
     private JLabel imgLabel3;
     private JLabel imgLabel4;
+    private JScrollPane candyScroll;
+    private JTextArea addedCandy;
+    private JTextField addCandyBox;
+    private JButton addCandyButton;
     private Container cPane;
     private Color customColor = new Color(72,187,47);
 
@@ -38,15 +41,17 @@ public class AddPeopleGUI extends JFrame {
         cPane.add(formPanel);
         addPersonBox.setText("Enter Name ...");
         addedPeople.setEnabled(true);
+        addedCandy.setEnabled(true);
         addScroll.setPreferredSize(new Dimension(1326, 800));
+        candyScroll.setPreferredSize(new Dimension(1326, 800));
         addedPeople.setText(list);
         addedPeople.setDisabledTextColor(customColor);
         exitButton.setPreferredSize(new Dimension(140, 70));
         randomizeButton.setPreferredSize(new Dimension(140, 70));
         addPersonButton.setPreferredSize(new Dimension(140, 70));
-        importFileButton.setPreferredSize(new Dimension(140, 70));
-        imgLabel3.setIcon(new ImageIcon("src\\ribbon.png"));
-        imgLabel4.setIcon(new ImageIcon("src\\ribbon.png"));
+        addCandyButton.setPreferredSize(new Dimension(140, 70));
+        imgLabel3.setIcon(new ImageIcon("src\\Jackolantern.png"));
+        imgLabel4.setIcon(new ImageIcon("src\\Jackolantern.png"));
         addPersonBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -83,6 +88,25 @@ public class AddPeopleGUI extends JFrame {
                 addPersonBox.setText("Enter Name ...");
             }
         });
+        addCandyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Model.tempCandyString = "";
+                String[] temp = addedCandy.getText().split("\n");
+                if (Model.counterAdded != temp.length) {
+                    Model.counterAdded = temp.length;
+                } else if (temp.length == 0) {
+                    Model.counter = 0;
+                }
+                String strTemp = addedCandy.getText() + addCandyBox.getText() + "\n";
+                String[] strLines = strTemp.split("\n");
+                Model.counter = strLines.length;
+                addedCandy.setText(addedCandy.getText() + addCandyBox.getText() + "\n");
+                Model.counter++;
+                Model.counterAdded++;
+                addCandyBox.setText("Enter Candy ...");
+            }
+        });
         randomizeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,20 +116,7 @@ public class AddPeopleGUI extends JFrame {
                 }
                 Model.setPeopleAndAssignments();
                 dispose();
-                new RandomizedGUI("Secret Santa");
-            }
-        });
-        importFileButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    Model.tempDisplayString = addedPeople.getText();
-                    new ImportFileGUI("Secret Santa");
-                    dispose();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                    new ErrorGUI("Secret Santa Error", "An Error Occurred");
-                }
+                new RandomizedGUI("Secret Halloween");
             }
         });
     }
