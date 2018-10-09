@@ -40,7 +40,7 @@ public class MenuGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new AddPeopleGUI("Secret Halloween", "");
+                new AddPeopleGUI("Secret Halloween", "", "");
             }
         });
     }

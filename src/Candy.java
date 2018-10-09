@@ -21,4 +21,10 @@ public class Candy {
     public boolean getPerson() {
         return person;
     }
+
+    public void set(String name, boolean assigned, boolean person) {
+        this.name = name;
+        this.assigned = assigned;
+        this.person = person;
+    }
 }

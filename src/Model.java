@@ -9,18 +9,19 @@ import java.util.*;
  * Version 7/27/2018
  */
 public class Model {
-    static Hashtable<Person, Person> peopleAndAssignments;
+    static Hashtable<Candy, Person> peopleAndAssignments;
     static ArrayList<Person> people = new ArrayList<>();
+    static ArrayList<Candy> candy = new ArrayList<>();
     static int counter = 0;
     static int counterAdded;
     static boolean falseImportCheck = false;
     static int counterAssign;
     static int i;
     static Random r = new Random();
-    static String path = "C:\\Users\\Andyo\\Desktop";
     static String fileName;
     static String importFileName;
-    static String list;
+    static String listP;
+    static String listC;
     static File f;
     static File newFile;
     static File desktop = new File(System.getProperty("user.home") + "\\Desktop");
@@ -41,9 +42,6 @@ public class Model {
         long startTime = System.currentTimeMillis();
         while (counterAssign < people.size()) {
             int ran = r.nextInt(people.size());
-//            for (Person p : people) {
-//                System.out.println(p.getName() + " : " + p.getAssigned() + " : " + p.getCandy() + " : " + p.getClass());
-//            }
             newTime = System.currentTimeMillis() - startTime;
             if (newTime > 1250) {
                 for (Person p : people) {
@@ -53,11 +51,10 @@ public class Model {
                 counterAssign = 0;
                 peopleAndAssignments = new Hashtable<>();
                 startTime = System.currentTimeMillis();
-//                System.out.println("TIMEOUT : RE-RANDOMIZING : " + newTime);
             }
-            if (!(people.get(ran).equals(people.get(i))) && !people.get(ran).getAssigned() && !people.get(i).getCandy()) {
-                peopleAndAssignments.put(people.get(ran), people.get(i));
-                people.get(ran).set(people.get(ran).getName(), true, people.get(ran).getCandy());
+            if (!(candy.get(ran).equals(people.get(i))) && !candy.get(ran).getAssigned() && !people.get(i).getCandy()) {
+                peopleAndAssignments.put(candy.get(ran), people.get(i));
+                candy.get(ran).set(candy.get(ran).getName(), true, candy.get(ran).getPerson());
                 people.get(i).set(people.get(i).getName(), people.get(i).getAssigned(), true);
                 counterAssign++;
                 i++;
@@ -70,17 +67,5 @@ public class Model {
         writer = new PrintWriter(newFile);
         writer.println(saveString);
         writer.close();
-    }
-
-    public static void importFile() throws FileNotFoundException {
-        reader = new Scanner(new FileReader(desktop + "\\" + importFileName));
-        importDisplayString = "";
-        readBuilder = new StringBuilder();
-        while (reader.hasNext()) {
-            readBuilder.append(reader.nextLine() + "\n");
-        }
-        reader.close();
-        importDisplayString = readBuilder.toString();
-        falseImportCheck = false;
     }
 }

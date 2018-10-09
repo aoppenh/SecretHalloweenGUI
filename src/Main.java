@@ -6,7 +6,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        SplashGUI splg = new SplashGUI("Secret Valentine");
+        SplashGUI splg = new SplashGUI("Secret Halloween");
         Thread.sleep(5000);
         splg.dispose();
         new MenuGUI("Secret Halloween");

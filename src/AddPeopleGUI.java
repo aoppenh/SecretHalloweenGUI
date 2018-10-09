@@ -29,7 +29,7 @@ public class AddPeopleGUI extends JFrame {
     private Container cPane;
     private Color customColor = new Color(72,187,47);
 
-    public AddPeopleGUI(String title, String list) {
+    public AddPeopleGUI(String title, String listP, String listC) {
         Model.counterAdded = 0;
         cPane = this.getContentPane();
         this.setTitle(title);
@@ -44,7 +44,8 @@ public class AddPeopleGUI extends JFrame {
         addedCandy.setEnabled(true);
         addScroll.setPreferredSize(new Dimension(1326, 800));
         candyScroll.setPreferredSize(new Dimension(1326, 800));
-        addedPeople.setText(list);
+        addedPeople.setText(listP);
+        addedCandy.setText(listC);
         addedPeople.setDisabledTextColor(customColor);
         exitButton.setPreferredSize(new Dimension(140, 70));
         randomizeButton.setPreferredSize(new Dimension(140, 70));
@@ -77,11 +78,6 @@ public class AddPeopleGUI extends JFrame {
                 String strTemp = addedPeople.getText() + addPersonBox.getText() + "\n";
                 String[] strLines = strTemp.split("\n");
                 Model.counter = strLines.length;
-//                if (Model.counter == 0 && Model.counterAdded == 0) {
-//                    addedPeople.setText(addedPeople.getText() + addPersonBox.getText());
-//                } else {
-//                    addedPeople.setText(addedPeople.getText() + "\n" + addPersonBox.getText());
-//                }
                 addedPeople.setText(addedPeople.getText() + addPersonBox.getText() + "\n");
                 Model.counter++;
                 Model.counterAdded++;
@@ -110,9 +106,13 @@ public class AddPeopleGUI extends JFrame {
         randomizeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String[] temp = addedPeople.getText().split("\n");
-                for (String str : temp) {
+                String[] tempP = addedPeople.getText().split("\n");
+                String[] tempC = addedCandy.getText().split("\n");
+                for (String str : tempP) {
                     Model.people.add(new Person(str, false, false));
+                }
+                for (String str : tempC) {
+                    Model.candy.add(new Candy(str, false, false));
                 }
                 Model.setPeopleAndAssignments();
                 dispose();
@@ -120,8 +120,4 @@ public class AddPeopleGUI extends JFrame {
             }
         });
     }
-
-//    public static void main(String[] args) {
-//        new AddPeopleGUI("Secret Santa");
-//    }
 }

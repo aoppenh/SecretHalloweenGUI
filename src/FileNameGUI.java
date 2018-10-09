@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * Created by Andrew Oppenheimer on 12/25/2016.
- * Version 4/19/2018
+ * Version 10/09/2018
  */
 public class FileNameGUI extends JFrame {
     private JPanel formPanel;
@@ -53,7 +53,7 @@ public class FileNameGUI extends JFrame {
                     for (File f : files) {
                         if (Model.fileName.equals(f.getName()) && !f.isDirectory()) {
                             test = false;
-                            new ErrorGUI("Secret Santa Error", "File Already Exists");
+                            new ErrorGUI("Secret Halloween Error", "File Already Exists");
                             saveFileBox.setText("Enter a File Name ...");
                             break;
                         }
@@ -62,18 +62,18 @@ public class FileNameGUI extends JFrame {
                         Model.newFile.createNewFile();
                         Model.saveBuilder = new StringBuilder();
                         Model.saveString = "";
-                        for (Map.Entry<Person, Person> p : Model.peopleAndAssignments.entrySet()) {
-                            Model.saveBuilder.append(p.getKey().getName() + " will buy a gift for " + p.getValue().getName() + "\n");
+                        for (Map.Entry<Candy, Person> p : Model.peopleAndAssignments.entrySet()) {
+                            Model.saveBuilder.append(p.getKey().getName() + " will get the candy " + p.getValue().getName() + "\n");
                         }
                         Model.save();
                         dispose();
                     }
                 } catch (FileNotFoundException e1) {
                     e1.printStackTrace();
-                    new ErrorGUI("Secret Santa Error", "File Creation Error");
+                    new ErrorGUI("Secret Halloween Error", "File Creation Error");
                 } catch (IOException e1) {
                     e1.printStackTrace();
-                    new ErrorGUI("Secret Santa Error", "An Error Occurred");
+                    new ErrorGUI("Secret Halloween Error", "An Error Occurred");
                 }
             }
         });
