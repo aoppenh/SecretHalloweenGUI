@@ -53,6 +53,7 @@ public class AddPeopleGUI extends JFrame {
         addCandyButton.setPreferredSize(new Dimension(140, 70));
         imgLabel3.setIcon(new ImageIcon("src\\Jackolantern.png"));
         imgLabel4.setIcon(new ImageIcon("src\\Jackolantern.png"));
+        Model.timeCheck = false;
         addPersonBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -115,8 +116,13 @@ public class AddPeopleGUI extends JFrame {
                     Model.candy.add(new Candy(str, false, false));
                 }
                 Model.setPeopleAndAssignments();
-                dispose();
-                new RandomizedGUI("Secret Halloween");
+                if (!Model.timeCheck) {
+                    dispose();
+                    new RandomizedGUI("Secret Halloween");
+                } else {
+                    new ErrorGUI("Secret Halloween", "Mismatched number of entries.");
+                    Model.timeCheck = false;
+                }
             }
         });
     }

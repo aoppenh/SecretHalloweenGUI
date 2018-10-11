@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 /**
  * Created by Andrew Oppenheimer on 12/25/2016.
+ * Version 10/09/2018
  */
 public class ErrorGUI extends JFrame {
     private JPanel formPanel;
@@ -35,6 +36,7 @@ public class ErrorGUI extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Model.timeCheck = false;
                 dispose();
             }
         });
